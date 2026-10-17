@@ -7,7 +7,9 @@ return new class extends Migration
 {
     public function up(): void
     {
-        DB::statement("ALTER TABLE products ALTER COLUMN wa_link SET DEFAULT 'https://wa.me/6281273919000'");
+        if (DB::getDriverName() !== 'sqlite') {
+            DB::statement("ALTER TABLE products ALTER COLUMN wa_link SET DEFAULT 'https://wa.me/6281273919000'");
+        }
 
         DB::table('products')
             ->where('wa_link', 'like', '%6289666006006%')
@@ -18,7 +20,9 @@ return new class extends Migration
 
     public function down(): void
     {
-        DB::statement("ALTER TABLE products ALTER COLUMN wa_link SET DEFAULT 'https://wa.me/6289666006006'");
+        if (DB::getDriverName() !== 'sqlite') {
+            DB::statement("ALTER TABLE products ALTER COLUMN wa_link SET DEFAULT 'https://wa.me/6289666006006'");
+        }
 
         DB::table('products')
             ->where('wa_link', 'like', '%6281273919000%')
