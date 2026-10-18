@@ -1,7 +1,7 @@
-<header id="navbar" role="banner" class="navbar fixed w-full top-0 flex items-center justify-between z-99 xl:px-17 lg:px-12 px-8 lg:pt-4.5 pt-4.25 lg:pb-5.5 pb-4.5" aria-label="Header utama">
+<header id="navbar" role="banner" class="navbar fixed w-full top-0 flex items-center justify-between z-99 xl:px-17 lg:px-12 px-8 lg:pt-3 pt-3 lg:pb-3 pb-3" aria-label="Header utama">
     {{-- ===== Logo PT Panjalu ===== --}}
     <a href="{{ route('home') }}" aria-label="PT Panjalu - Kembali ke Beranda" class="inline-flex items-center rounded-[2rem] border-0 bg-transparent p-0 transition-transform duration-300 hover:scale-[1.02]">
-        <img src="{{ asset('images/logo-panjalu_rakerwil-2023.png') }}" alt="Logo PT Panjalu" loading="eager" width="167" height="94" class="logo-mark lg:w-36 w-32 h-auto object-contain" role="presentation">
+        <img src="{{ asset('images/logo-panjalu_rakerwil-2023.png') }}" alt="Logo PT Panjalu" loading="eager" width="167" height="94" class="logo-mark lg:w-32 w-28 h-auto object-contain" role="presentation">
     </a>
 
     {{-- ===== Navigation Menu Desktop ===== --}}
